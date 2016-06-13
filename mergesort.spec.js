@@ -47,3 +47,25 @@ describe('Merge Sort', function(){
     expect(mergeSort([20, 55, 68, 4, 1, 80, 11])).toEqual([1, 4, 11, 20, 55, 68, 80]);
   });  
 });
+
+describe('Merge Custom', function(){
+  it('is able to merge two empty arrays into one empty array', function(){
+    // test the merging algorithm
+    expect(mergeCustom([], [])).toEqual([]);
+  });
+
+  it('is able to merge two arrays of one element into one sorted array', function(){
+    // test the merging algorithm
+    expect(mergeCustom([1], [2])).toEqual([1, 2]);
+  });
+
+  it('is able to merge two longer sorted arrays into one sorted array', function(){
+    // test the merging algorithm
+    expect(mergeCustom([5, 10, 20], [15, 45, 60])).toEqual([5, 10, 15, 20, 45, 60]);
+  });
+
+  it('is able to merge two longer sorted arrays into one sorted array', function(){
+    // test the merging algorithm
+    expect(mergeCustom([5, 10, 20], [15, 45, 60, 67, 78, 80, 92, 103, 157, 200, 500])).toEqual([5, 10, 15, 20, 45, 60, 67, 78, 80, 92, 103, 157, 200, 500]);
+  });
+});
